@@ -1,10 +1,11 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-weight: 400;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
 }
@@ -139,9 +140,10 @@ p {
 
 .section_hebergement {
     display: flex;
+    margin: 0 auto;
     align-items: stretch;
     justify-content: space-around;
-    gap: 30px;
+    gap: 10px;
     border: none;
     border-radius: 15px;
     padding: 15px 15px;
@@ -151,24 +153,28 @@ p {
     background: #F2F2F2;
     height: 0%;
     border-radius: 15px;
+    min-width: 60%;
     padding: 15px 15px;
 }
 
 .section_hebergement_populaire {
     background-color: #F2F2F2;
     display: grid;
+    justify-content: center;
+    align-items: center;
     border-radius: 15px;
+    min-width: 40%;
     padding: 15px 15px;
 }
 
 .habitation {
-    display: flex;
     background-color: white;
     border: none;
     border-radius: 15px;
     padding: 10px 10px;
     box-shadow: 2px 2px 2px 2px #bfbfbf;
     position: relative;
+    width: 30%;
 }
 
 .habitation_populaire {
@@ -183,26 +189,35 @@ p {
 
 
 .habitation_image {
-    width: 300px;
+    width: 100%;
     height: 150px;
+    object-position: center;
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.habitation_text_populaire {
+    width: 50%;
+    margin-left: 5%;
+}
+
 
 .habitation_image_populaire {
-    width: 300px;
+    width: 50%;
     height: 150px;
+    object-position: center;
     object-fit: cover;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-
 .Activité_Marseille {
-    padding: 15px;
+    padding-bottom: 3%;
+    padding-top: 3%;
     border-radius: 15px;
-    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer_content {
@@ -231,4 +246,67 @@ p {
 
 .list_service a:hover {
     color: #fff;
+}
+
+.habitation_activité {
+    display: flex;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 2px 2px #bfbfbf;
+    position: relative;
+}
+
+
+.bloc_activité_Marseille{
+    border: 1px solid #fff;
+    border-radius: 4%;
+    box-shadow: 5px 10px 20px #e4e1e1;
+}
+
+.habitation_image_activité_vieux_port {
+    width: 300px;
+    height: 348px;
+    object-fit: cover;
+    border-radius: 4% 4% 0px 0px;
+}
+
+.habitation_image_activité_fort_de_pomegues {
+    width: 300px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 4% 4% 0px 0px;
+}
+
+.habitation_image_activité_iles_du_frioul {
+    width: 300px;
+    height: 102px;
+    object-fit: cover;
+    border-radius: 4% 4% 0px 0px;
+}
+
+.habitation_image_activité_parc_national_des_calanques {
+    width: 300px;
+    height: 348px;
+    object-fit: cover;
+    border-radius: 4% 4% 0px 0px;
+}
+
+.habitation_image_activité_notre-dame-de-la-garde {
+    width: 300px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4% 4% 0px 0px;
+}
+
+.habitation_image_activité_parc_longchamp {
+    width: 300px;
+    height: 152px;
+    object-fit: cover;
+    border-radius: 4% 4% 0px 0px;
+}
+
+.title {
+    width: 100%;
 }
