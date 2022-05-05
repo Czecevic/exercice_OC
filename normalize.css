@@ -319,6 +319,14 @@ footer {
         
     }
 
+    nav ul {
+        padding: 0;
+    }
+
+    nav li {
+        padding-left: 0;
+    }
+
     nav a:hover {
         padding: initial;
         padding-bottom: 10px;
@@ -332,6 +340,10 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    .section_hebergement_basique {
+        background: none;
     }
 
     .section_hebergement_populaire {
@@ -357,6 +369,11 @@ footer {
 
     .habitation {
         width: 90%;
+        box-shadow: 4px 4px 4px 4px #e7e7e7;
+        padding: 5px 5px;
+    }
+    .habitation_image {
+        height: 100px;
     }
 
     .navbar_mobile {
