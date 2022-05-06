@@ -77,6 +77,10 @@ footer {
     transition: 0.2s;
 }
 
+.button_recherche_mobile {
+    display: none;
+}
+
 .button_recherche:hover {
     padding: 10px 10px;
     background-color: rgb(197, 223, 250);
@@ -313,25 +317,47 @@ footer {
 
 @media (max-width: 390px) {
 
-    nav a {
-        border-bottom: solid slategrey;
-        padding-bottom: 10px;
-        
-    }
-
     nav ul {
         padding: 0;
+        font-size: x-large;
     }
 
     nav li {
+        padding-bottom: 10px;
         padding-left: 0;
     }
 
     nav a:hover {
-        padding: initial;
-        padding-bottom: 10px;
+        transition: none;
         border-top: none;
-        border-bottom: solid #0065FC;
+        padding: 0px;
+    }
+
+    .activité {
+        padding-right: 19%;
+        padding-left: 10%;
+        border-bottom: 3px solid slategrey;
+    }
+    .activité:hover {
+        border-bottom: 3px solid #0065FC;
+    }
+
+    .hebergement {
+        padding-right: 10%;
+        padding-left: 5%;
+        border-bottom: 3px solid slategrey;
+    }
+
+    .hebergement:hover {
+        border-bottom: 3px solid #0065FC;
+    }
+
+    .recherche {
+        width: auto;
+    }
+
+    .logo {
+        align-self: center;
     }
 
     .Filtres {
@@ -341,6 +367,10 @@ footer {
         align-items: flex-start;
         gap: 10px;
     }
+    
+    .map {
+        padding: 6%;
+    }
 
     .section_hebergement_basique {
         background: none;
@@ -348,6 +378,7 @@ footer {
 
     .section_hebergement_populaire {
         margin-bottom: 10px;
+        border-radius: 0%;
     }
 
     .section_hebergement {
@@ -360,11 +391,34 @@ footer {
         width: 45%;
     }
 
+    .input_recherche {
+        padding: 5%;
+        font-size: 19px;
+        margin-right: -10px;
+    }
+
+    .button_recherche {
+        display: none;
+    }
+
+    .mobile_h2 {
+        padding: 5% 0;
+    }
+
+    .button_recherche_mobile {
+        display: block;
+        padding: 6%;
+        background-color: #0065FC;
+        border-radius: 10px;
+        color: white;
+        border: none;
+        transition: 0.2s;
+    }
+
     .habitation_populaire {
         padding: 5px 5px;
         margin-top: 5px;
         margin-bottom: 5px;
-        box-shadow: none;
     }
 
     .habitation {
@@ -379,7 +433,6 @@ footer {
     .navbar_mobile {
         width: 100%;
         flex-direction: column;
-        align-items: center;
         padding: 0;
     }
     .content-mobile {
