@@ -221,6 +221,7 @@ footer {
     padding-top: 3%;
     border-radius: 15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -267,6 +268,13 @@ footer {
     border: 1px solid #fff;
     border-radius: 10%;
     box-shadow: 5px 10px 20px #e4e1e1;
+}
+
+.bloc_activité_Marseille_avec_margin_bottom {
+    border: 1px solid #fff;
+    border-radius: 10%;
+    box-shadow: 5px 10px 20px #e4e1e1;
+    margin-bottom: 10%;
 }
 
 .habitation_image_activité_vieux_port {
@@ -320,6 +328,7 @@ footer {
     nav ul {
         padding: 0;
         font-size: x-large;
+        justify-content: space-between;
     }
 
     nav li {
@@ -334,18 +343,25 @@ footer {
     }
 
     .activité {
-        padding-right: 19%;
-        padding-left: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 12%;
+        padding-left: 12%;
         border-bottom: 3px solid slategrey;
     }
     .activité:hover {
         border-bottom: 3px solid #0065FC;
     }
-
     .hebergement {
+        margin-left: auto;
+        margin-right: auto;
         padding-right: 10%;
-        padding-left: 5%;
+        padding-left: 10%;
         border-bottom: 3px solid slategrey;
+    }
+
+    .ecart_habitation {
+        margin-bottom: 10px;
     }
 
     .hebergement:hover {
@@ -367,7 +383,6 @@ footer {
         align-items: flex-start;
         gap: 10px;
     }
-    
     .map {
         padding: 6%;
     }
@@ -382,9 +397,10 @@ footer {
     }
 
     .section_hebergement {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 0%;
         border-radius: 0px;
+        flex-wrap: none;
     }
 
     .habitation_text_populaire {
@@ -421,8 +437,13 @@ footer {
         margin-bottom: 5px;
     }
 
+    .etoile {
+        margin-bottom: 5%;
+        margin-left: 2%;
+    }
+
     .habitation {
-        width: 90%;
+        width: 100% !important;
         box-shadow: 4px 4px 4px 4px #e7e7e7;
         padding: 5px 5px;
     }
@@ -449,7 +470,22 @@ footer {
     }
     .list_service a {
         padding: 0%;
+    }
 
+    .bloc_activité_Marseille {
+        margin: 5%;
+        border-radius: 25px;
+    }
+
+    .bloc_activité_Marseille_avec_margin_bottom {
+        margin-bottom: 0%;
+        margin: 5%;
+    }
+
+    .habitation_image_activité_mobile {
+        width: 100% !important;
+        height: 120px;
+        border-radius: 25px 25px 0px 0px;
     }
 
     .bloc_mobile {
@@ -457,4 +493,28 @@ footer {
         width: auto;
     }
 
+}
+
+@media (max-width: 820px) {
+    .habitation {
+        width: 28%;
+    }
+    .habitation_image_activité_vieux_port {
+        width: 400px;
+    }
+
+    .habitation_image_activité_parc_national_des_calanques {
+        width: 400px;
+    }
+    .section_hebergement_populaire {
+        gap: 15px;
+    }
+
+    .section_hebergement {
+        flex-wrap: wrap-reverse;
+    }
+
+    .bloc_activité_Marseille_tablette {
+        margin-bottom: 8%;
+    }
 }
