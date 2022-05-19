@@ -45,7 +45,7 @@ nav a:hover {
 footer {
     background-color: #F2F2F2;
     flex-shrink: 0;
-    border-top: 1% dashed #000;
+    border-top: dashed #000;
     width: 100%;
 }
 
@@ -400,7 +400,7 @@ footer {
         flex-direction: column;
         padding: 0%;
         border-radius: 0px;
-        flex-wrap: none;
+        flex-wrap: unset;
     }
 
     .habitation_text_populaire {
