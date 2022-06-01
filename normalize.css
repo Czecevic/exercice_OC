@@ -1,5 +1,5 @@
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
 
@@ -45,7 +45,6 @@ nav a:hover {
 footer {
     background-color: #F2F2F2;
     flex-shrink: 0;
-    border-top: dashed #000;
     width: 100%;
 }
 
@@ -82,7 +81,6 @@ footer {
 }
 
 .button_recherche:hover {
-    padding: 10px 10px;
     background-color: rgb(197, 223, 250);
     border-radius: 0px 8px 8px 0px;
     color: black;
@@ -107,6 +105,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -132,12 +131,18 @@ footer {
 }
 
 .input1 {
+    background: none;
     border: none;
     font-size: medium;
-    margin-left: 6px;
-    width: 70%;
+    transition: 0.2s;
 }
-
+.input1:hover{
+    color: #DEEBFF;
+    background: #0065FC;
+    border-radius: 20px;
+    padding: 10px;
+}
+ 
 .section_header {
     padding: 15px 15px;
 }
@@ -158,24 +163,23 @@ footer {
     height: 0%;
     border-radius: 15px;
     min-width: 60%;
-    padding: 15px 15px;
+    padding: 5px 5px;
 }
 
 .section_hebergement_populaire {
     background-color: #F2F2F2;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-flow: wrap;
     border-radius: 15px;
-    min-width: 40%;
-    padding: 15px 15px;
+    width: 45%;
+    padding: 10px 10px;
 }
 
 .habitation {
     background-color: white;
     border: none;
     border-radius: 15px;
-    padding: 10px 10px;
+    padding: 5px 5px;
     box-shadow: 2px 2px 2px 2px #bfbfbf;
     position: relative;
     width: 30%;
@@ -186,7 +190,7 @@ footer {
     background-color: white;
     border: none;
     border-radius: 15px;
-    padding: 10px 10px;
+    padding: 5px 5px;
     box-shadow: 2px 2px 2px 2px #bfbfbf;
     position: relative;
 }
@@ -199,6 +203,10 @@ footer {
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.habitation_image:hover {
+    opacity: 50%;
 }
 
 .habitation_text_populaire {
@@ -215,6 +223,11 @@ footer {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
+.habitation_image_populaire:hover {
+    opacity: 50%;
+}
+
 
 .Activité_Marseille {
     padding-bottom: 3%;
@@ -278,45 +291,69 @@ footer {
 }
 
 .habitation_image_activité_vieux_port {
-    width: 300px;
+    width: 350px;
     height: 348px;
     object-fit: cover;
     border-radius: 10% 10% 0px 0px;
 }
 
+.habitation_image_activité_vieux_port:hover {
+    opacity: 50%;
+}
+
 .habitation_image_activité_fort_de_pomegues {
-    width: 300px;
+    width: 100%;
     height: 170px;
     object-fit: cover;
     border-radius: 10% 10% 0px 0px;
 }
 
+.habitation_image_activité_fort_de_pomegues:hover {
+    opacity: 50%;
+}
+
 .habitation_image_activité_iles_du_frioul {
-    width: 300px;
+    width: 100%;
     height: 102px;
     object-fit: cover;
     border-radius: 10% 10% 0px 0px;
 }
 
+.habitation_image_activité_iles_du_frioul:hover {
+    opacity: 50%;
+}
+
 .habitation_image_activité_parc_national_des_calanques {
-    width: 300px;
+    width: 350px;
     height: 348px;
     object-fit: cover;
     border-radius: 10% 10% 0px 0px;
 }
 
+.habitation_image_activité_parc_national_des_calanques:hover {
+    opacity: 50%;
+}
+
 .habitation_image_activité_notre-dame-de-la-garde {
-    width: 300px;
+    width: 100%;
     height: 120px;
     object-fit: cover;
     border-radius: 10% 10% 0px 0px;
 }
 
+.habitation_image_activité_notre-dame-de-la-garde:hover {
+    opacity: 50%;
+}
+
 .habitation_image_activité_parc_longchamp {
-    width: 300px;
+    width: 100%;
     height: 152px;
     object-fit: cover;
     border-radius: 10% 10% 0px 0px;
+}
+
+.habitation_image_activité_parc_longchamp:hover {
+    opacity: 50%;
 }
 
 .title {
