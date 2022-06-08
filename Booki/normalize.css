@@ -1,0 +1,557 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 6% 0% 0%;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    padding-left: 15%;
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: slategrey;
+}
+
+nav a:hover {
+    transition: 0.2s ease 0s;
+    color:#0065FC;
+    border-top: solid #0065FC;
+    padding-top: 23px;
+}
+
+footer {
+    background-color: #F2F2F2;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.span1 {
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 10%;
+}
+.recherche {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button_recherche {
+    padding: 10px 10px;
+    background-color: #0065FC;
+    border-radius: 0px 8px 8px 0px;
+    color: white;
+    border: none;
+    transition: 0.2s;
+}
+
+.button_recherche_mobile {
+    display: none;
+}
+
+.button_recherche:hover {
+    background-color: rgb(197, 223, 250);
+    border-radius: 0px 8px 8px 0px;
+    color: black;
+    border: none;
+}
+
+.map {
+    background-color: #F2F2F2;
+    padding: 10px 10px 9px 10px;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+    text-align: center;
+}
+
+.input_recherche {
+    padding: 9px 8px;
+    border: 1px solid #F2F2F2;
+}
+
+.Filtres {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.map2 {
+    background-color: #DEEBFF;
+    color: #0065FC;
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    padding: 6px 6px 5px 6px;
+    border-radius: 15px;
+    border: 1px solid #F2F2F2;
+}
+
+.map3 {
+    color: #0065FC;
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    padding: 6px 6px 5px 6px;
+    border-radius: 15px;
+    border: 1px solid #F2F2F2;
+}
+
+.input1 {
+    background: none;
+    border: none;
+    font-size: medium;
+    transition: 0.2s;
+}
+.input1:hover{
+    color: #DEEBFF;
+    background: #0065FC;
+    border-radius: 20px;
+    padding: 10px;
+}
+ 
+.section_header {
+    padding: 15px 15px;
+}
+
+.section_hebergement {
+    display: flex;
+    margin: 0 auto;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 10px;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 15px;
+}
+
+.section_hebergement_basique {
+    background: #F2F2F2;
+    height: 0%;
+    border-radius: 15px;
+    min-width: 60%;
+    padding: 5px 5px;
+}
+
+.section_hebergement_populaire {
+    background-color: #F2F2F2;
+    flex-flow: wrap;
+    min-height: 40%;
+    border-radius: 15px;
+    padding: 10px 10px;
+}
+
+.habitation {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 5px;
+    box-shadow: 2px 2px 2px 2px #bfbfbf;
+    position: relative;
+    width: 30%;
+}
+
+.habitation_populaire {
+    display: flex;
+    background-color: white;
+    border: none;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    padding: 5px 5px;
+    box-shadow: 2px 2px 2px 2px #bfbfbf;
+    position: relative;
+}
+
+
+.habitation_image {
+    width: 100%;
+    height: 150px;
+    object-position: center;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.habitation_image:hover {
+    opacity: 50%;
+}
+
+.habitation_text_populaire {
+    width: 50%;
+    margin-left: 5%;
+}
+
+
+.habitation_image_populaire {
+    width: 50%;
+    height: 150px;
+    object-position: center;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.habitation_image_populaire:hover {
+    opacity: 50%;
+}
+
+
+.Activité_Marseille {
+    padding: 15px 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.footer_content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.bloc {
+    width: 25%;
+    margin: 0 30px;
+}
+
+.footer_service {
+    padding-bottom: 20px;
+}
+
+.list_service a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #333;
+    transition: 0.2s;
+}
+
+.list_service a:hover {
+    color: rgb(247, 245, 245);
+}
+
+.habitation_activité {
+    display: flex;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 2px 2px #bfbfbf;
+    position: relative;
+}
+
+
+.bloc_activité_Marseille{
+    border: 1px solid #fff;
+    border-radius: 10%;
+    box-shadow: 5px 10px 20px #e4e1e1;
+}
+
+.bloc_activité_Marseille_avec_margin_bottom {
+    border: 1px solid #fff;
+    border-radius: 10%;
+    box-shadow: 5px 10px 20px #e4e1e1;
+    margin-bottom: 15px;
+}
+
+.habitation_image_activité_vieux_port {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10% 10% 0px 0px;
+}
+
+.habitation_image_activité_vieux_port:hover {
+    opacity: 50%;
+}
+
+.habitation_image_activité_fort_de_pomegues {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10% 10% 0px 0px;
+}
+
+.habitation_image_activité_fort_de_pomegues:hover {
+    opacity: 50%;
+}
+
+.habitation_image_activité_iles_du_frioul {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10% 10% 0px 0px;
+}
+
+.habitation_image_activité_iles_du_frioul:hover {
+    opacity: 50%;
+}
+
+.habitation_image_activité_parc_national_des_calanques {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10% 10% 0px 0px;
+}
+
+.habitation_image_activité_parc_national_des_calanques:hover {
+    opacity: 50%;
+}
+
+.habitation_image_activité_notre-dame-de-la-garde {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10% 10% 0px 0px;
+}
+
+.habitation_image_activité_notre-dame-de-la-garde:hover {
+    opacity: 50%;
+}
+
+.habitation_image_activité_parc_longchamp {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10% 10% 0px 0px;
+}
+
+.habitation_image_activité_parc_longchamp:hover {
+    opacity: 50%;
+}
+
+.title {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .habitation {
+        width: 28%;
+    }
+    .habitation_image_activité_vieux_port {
+        width: 200px;
+    }
+
+    .habitation_image_activité_parc_national_des_calanques {
+        width: 200px;
+    }
+    .section_hebergement_populaire {
+        gap: 15px;
+    }
+
+    .section_hebergement {
+        flex-wrap: wrap-reverse;
+    }
+
+    .bloc_activité_Marseille_tablette {
+        margin-bottom: 8%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    nav ul {
+        padding: 0;
+        font-size: x-large;
+        justify-content: space-between;
+    }
+
+    nav li {
+        padding-bottom: 10px;
+        padding-left: 0;
+    }
+
+    nav a:hover {
+        transition: none;
+        border-top: none;
+        padding: 0px;
+    }
+
+    .activité {
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 12%;
+        padding-left: 12%;
+        border-bottom: 3px solid slategrey;
+    }
+    .activité:hover {
+        border-bottom: 3px solid #0065FC;
+    }
+    .hebergement {
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 10%;
+        padding-left: 10%;
+        border-bottom: 3px solid slategrey;
+    }
+
+    .ecart_habitation {
+        margin-bottom: 10px;
+    }
+
+    .hebergement:hover {
+        border-bottom: 3px solid #0065FC;
+    }
+
+    .recherche {
+        width: auto;
+    }
+
+    .logo {
+        align-self: center;
+    }
+
+    .Filtres {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .map {
+        padding: 6%;
+    }
+
+    .section_hebergement_basique {
+        background: none;
+    }
+
+    .section_hebergement_populaire {
+        margin-bottom: 10px;
+        border-radius: 0%;
+    }
+
+    .section_hebergement {
+        flex-direction: column;
+        padding: 0%;
+        border-radius: 0px;
+        flex-wrap: unset;
+    }
+
+    .habitation_text_populaire {
+        width: 45%;
+    }
+
+    .input_recherche {
+        padding: 5%;
+        font-size: 19px;
+        margin-right: -10px;
+    }
+
+    .button_recherche {
+        display: none;
+    }
+
+    .mobile_h2 {
+        padding: 5% 0;
+    }
+
+    .button_recherche_mobile {
+        display: block;
+        padding: 6%;
+        background-color: #0065FC;
+        border-radius: 10px;
+        color: white;
+        border: none;
+        transition: 0.2s;
+    }
+
+    .habitation_populaire {
+        padding: 5px 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .etoile {
+        margin-bottom: 5%;
+        margin-left: 2%;
+    }
+
+    .habitation {
+        width: 100% !important;
+        box-shadow: 4px 4px 4px 4px #e7e7e7;
+        padding: 5px 5px;
+    }
+    .habitation_image {
+        height: 100px;
+    }
+
+    .navbar_mobile {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+    .content-mobile {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .Activité_Marseille_mobile {
+        display: block;
+    }
+    .footer_content_mobile {
+        flex-direction: column;
+        padding: 0;
+
+    }
+    .list_service a {
+        padding: 0%;
+    }
+
+    .bloc_activité_Marseille {
+        margin: 5%;
+        border-radius: 25px;
+    }
+
+    .bloc_activité_Marseille_avec_margin_bottom {
+        margin-bottom: 0%;
+        margin: 5%;
+    }
+
+    .habitation_image_activité_mobile {
+        width: 100% !important;
+        height: 120px;
+        border-radius: 25px 25px 0px 0px;
+    }
+
+    .bloc_mobile {
+        margin: 0px;
+        width: auto;
+    }
+
+}
