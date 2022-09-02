@@ -6,7 +6,7 @@
     position: relative;
   }
 
-  &__previous {
+  &_previous {
     position: absolute;
     left: 2rem;
     height: 2rem;
@@ -35,18 +35,21 @@
   z-index: 1;
   position: relative;
 
-  &__header {
+  &_header {
     padding: 1rem 2rem 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 270px) {
+      display: grid;
+    }
   }
 
-  &__title {
+  &_title {
     font-family: "Shrikhand", "cursive";
   }
 
-  &__btn {
+  &_btn {
     height: 2rem;
     width: 2rem;
     background-color: transparent;
@@ -76,7 +79,7 @@
     }
   }
 
-  &__like {
+  &_like {
     transition-duration: .25s;
     background-color: #f6f6f6;
     position: absolute;
@@ -90,8 +93,8 @@
     mix-blend-mode: lighten;
   }
 
-  &__btn:hover {
-    .menu__like {
+  &_btn:hover {
+    .menu_like {
       &--noBg {
         opacity: 0;
       }
@@ -113,7 +116,7 @@
   overflow: hidden;
   padding: 0 1rem;
 
-  &__title {
+  &_title {
     text-transform: uppercase;
     position: relative;
     padding-bottom: 0.5rem;
@@ -140,34 +143,34 @@
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  animation: itemAppear .6s;
+  animation: itemAppear .8s;
   animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
 
-  &__header {
+  &_header {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     flex: 1;
   }
 
-  &__title {
+  &_title {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
-  &__description {
+  &_description {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
-  &__price {
+  &_price {
     font-weight: bold;
     display: flex;
     justify-content: flex-end;
@@ -175,7 +178,7 @@
     padding-left: 0.5rem;
   }
 
-  &__confirmation {
+  &_confirmation {
     background-color: $color-tertiary;
     margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
@@ -185,11 +188,11 @@
     transition-duration: 0.5s;
   }
 
-  &:hover &__confirmation {
+  &:hover &_confirmation {
     margin-right: -1rem;
   }
 
-  &__wrapIcon {
+  &_wrapIcon {
     height: 1.6rem;
     width: 1.6rem;
     background-color: white;
@@ -197,23 +200,23 @@
     align-items:center;
     justify-content:center;
     border-radius: 100px;
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     transition-duration: 0.5s;
 
   }
 
-  &:hover &__wrapIcon {
+  &:hover &_wrapIcon {
     transform: rotate(0);
   }
 
-  &__icon {
+  &_icon {
     color: $color-tertiary;
   }
 }
 
 @for $i from 0 to 9 {
   .delay-#{$i} {
-    animation-delay:  cacl(scut-strip-unit($i)/10)s;
+    animation-delay: #{$i/10}s;
   }
 }
 

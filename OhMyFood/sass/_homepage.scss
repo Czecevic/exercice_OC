@@ -1,3 +1,14 @@
+/* 
+
+  modifier la rotation du like
+
+  verifier le responssive jusqu'a 200
+
+  validator HTML
+
+
+*/ 
+
 .loader {
   position: fixed;
   height: 100%;
@@ -13,7 +24,7 @@
   align-items:center;
   justify-content:center;
 
-  &__item {
+  &_item {
     height: 1rem;
     width: 1rem;
     border-radius: 1rem;
@@ -32,12 +43,12 @@
   
     &--2 {
       background-color: $color-secondary;
-      animation-delay: 0.25s;
+      animation-delay: 0.5s;
     }
   
     &--3 {
       background-color: $color-tertiary;
-      animation-delay: 0.5s;
+      animation-delay: 1s;
     }
   }
 
@@ -52,11 +63,11 @@
   font-size: 1.2rem;
   position: relative;
 
-  &__icon {
+  &_icon {
     margin-right: 1rem;
   }
 
-  &__text {
+  &_text {
     font-weight: 700;
     font-size: 1.2rem;
     margin: 0;
@@ -68,16 +79,16 @@
   text-align: center;
   background-color: rgb(250, 250, 250);
 
-  &__title {
+  &_title {
     margin: 0;
   }
 
-  &__subtitle {
+  &_subtitle {
     font-weight: 300;
     margin: 1.5rem 0;
   }
 
-  &__btn {
+  &_btn {
     @include button(primary);
   }
 }
@@ -85,11 +96,11 @@
 .function {
   padding: ( $appPadding + 1rem ) $appPadding;
 
-  &__title {
+  &_title {
     margin-top: 0;
   }
 
-  &__steps {
+  &_steps {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -100,7 +111,7 @@
     }
   }
 
-  &__step {
+  &_step {
     padding: 1.5rem;
     margin: 1rem 0 1rem 0.75rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
@@ -108,6 +119,10 @@
     background-color: #f6f6f6;
     display: flex;
     position: relative;
+    &:hover {
+      background-color: rgba($color:$color-primary, $alpha: 0.5);
+      cursor: pointer;
+    }
 
     @media (min-width:64rem) {
       flex: 1;
@@ -143,7 +158,7 @@
     }
   }
 
-  &__icon {
+  &_icon {
     margin-right: 1rem;
     color: #7e7e7e;
   }
@@ -153,7 +168,7 @@
   background-color: #f6f6f6;
   padding: ($appPadding + 1rem) $appPadding;
 
-  &__title {
+  &_title {
     margin-top: 0;
   }
 }
@@ -183,7 +198,7 @@
   display: block;
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
   transition: .2s;
-  &__img {
+  &_img {
     height: 12rem;
     width: 100%;
     border: transparent solid 0px;
@@ -192,7 +207,7 @@
     object-fit: cover;
   }
 
-  &__badge {
+  &_badge {
     background-color: $color-tertiary;
     color: darken($color-tertiary, 50%);
     padding: 0.5rem;
@@ -202,27 +217,27 @@
     right: 0.75rem;
   }
 
-  &__footer {
+  &_footer {
     padding: 1rem;
     position: relative;
     display: flex;
     align-items: center;
   }
 
-  &__content {
+  &_content {
     flex: 1;
   }
 
-  &__title {
+  &_title {
     margin: 0;
     margin-bottom: 0.25rem;
   }
 
-  &__subtitle {
+  &_subtitle {
     margin: 0;
   }
 
-  &__btn {
+  &_btn {
     height: 2rem;
     width: 2rem;
     background-color: transparent;
@@ -233,12 +248,12 @@
     justify-content:center;
   }
 
-  &__like {
+  &_like {
     background-color: white!important;
   }
   &:hover {
-    -ms-transform: scale(1.019); /* IE 9 */
-    -webkit-transform: scale(1.019); /* Safari 3-8 */
+    -ms-transform: scale(1.019);
+    -webkit-transform: scale(1.019);
     transform: scale(1.015); 
   }
   &:active{

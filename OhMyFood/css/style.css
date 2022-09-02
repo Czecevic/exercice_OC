@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-
 @keyframes itemAppear {
   0% {
     transform: scale(0);
@@ -19,10 +18,10 @@
     transform: translateY(0);
   }
   25% {
-    transform: translateY(0.5rem);
+    transform: translateY(1rem);
   }
   75% {
-    transform: translateY(-0.5rem);
+    transform: translateY(-1rem);
   }
   100% {
     transform: translateY(0);
@@ -46,10 +45,15 @@ body, html {
   position: relative;
   z-index: 1000;
 }
-.header__logo {
+.header_logo {
   font-family: "Shrikhand", "cursive";
   margin: 0;
   text-align: center;
+}
+@media (max-width: 270px) {
+  .header_logo {
+    font-size: 1em;
+  }
 }
 
 .footer {
@@ -60,39 +64,49 @@ body, html {
   flex-direction: column;
   padding: 1rem;
 }
-.footer__logo {
+.footer_logo {
   color: white;
   font-family: "Shrikhand", "cursive";
   margin: 0;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-.footer__list {
+.footer_list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.footer__listElement {
+.footer_listElement {
   margin: 0.5rem 0;
 }
-.footer__listElement:first-child {
+.footer_listElement:first-child {
   margin-top: 0;
 }
-.footer__listElement:last-child {
+.footer_listElement:last-child {
   margin-bottom: 0;
 }
-.footer__link {
+.footer_link {
   color: white;
   text-decoration: none;
 }
-.footer__link:hover {
+.footer_link:hover {
   text-decoration: underline;
 }
-.footer__icon {
+.footer_icon {
   width: 1.2rem;
   margin-right: 0.5rem;
 }
 
+/* 
+
+  modifier la rotation du like
+
+  verifier le responssive jusqu'a 200
+
+  validator HTML
+
+
+*/
 .loader {
   position: fixed;
   height: 100%;
@@ -108,28 +122,28 @@ body, html {
   align-items: center;
   justify-content: center;
 }
-.loader__item {
+.loader_item {
   height: 1rem;
   width: 1rem;
   border-radius: 1rem;
   animation: jump 1s;
   animation-iteration-count: 1;
 }
-.loader__itemContainer {
+.loader_itemContainer {
   display: flex;
   width: 5rem;
   justify-content: space-between;
 }
-.loader__item--1 {
+.loader_item--1 {
   background-color: #9356DC;
 }
-.loader__item--2 {
+.loader_item--2 {
   background-color: #FF79DA;
-  animation-delay: 0.25s;
-}
-.loader__item--3 {
-  background-color: #99E2D0;
   animation-delay: 0.5s;
+}
+.loader_item--3 {
+  background-color: #99E2D0;
+  animation-delay: 1s;
 }
 
 .localisation {
@@ -140,10 +154,10 @@ body, html {
   font-size: 1.2rem;
   position: relative;
 }
-.localisation__icon {
+.localisation_icon {
   margin-right: 1rem;
 }
-.localisation__text {
+.localisation_text {
   font-weight: 700;
   font-size: 1.2rem;
   margin: 0;
@@ -154,14 +168,14 @@ body, html {
   text-align: center;
   background-color: rgb(250, 250, 250);
 }
-.about__title {
+.about_title {
   margin: 0;
 }
-.about__subtitle {
+.about_subtitle {
   font-weight: 300;
   margin: 1.5rem 0;
 }
-.about__btn {
+.about_btn {
   border: 0;
   padding: 0.75rem 1.5rem;
   font-weight: 500;
@@ -174,33 +188,38 @@ body, html {
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
-.about__btn:hover {
+.about_btn:hover {
   background-color: white;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
-.about__btn a {
+.about_btn a {
   text-decoration: none;
   color: inherit;
+}
+@media (max-width: 280px) {
+  .about_btn {
+    font-size: 0.6rem;
+  }
 }
 
 .function {
   padding: 2rem 1rem;
 }
-.function__title {
+.function_title {
   margin-top: 0;
 }
-.function__steps {
+.function_steps {
   margin: 0;
   padding: 0;
   list-style: none;
   counter-reset: compteListe;
 }
 @media (min-width: 64rem) {
-  .function__steps {
+  .function_steps {
     display: flex;
   }
 }
-.function__step {
+.function_step {
   padding: 1.5rem;
   margin: 1rem 0 1rem 0.75rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
@@ -209,23 +228,27 @@ body, html {
   display: flex;
   position: relative;
 }
+.function_step:hover {
+  background-color: rgba(147, 86, 220, 0.5);
+  cursor: pointer;
+}
 @media (min-width: 64rem) {
-  .function__step {
+  .function_step {
     flex: 1;
     margin: 0;
     margin-left: 2rem;
   }
-  .function__step:first-child {
+  .function_step:first-child {
     margin-left: 0.75rem;
   }
 }
-.function__step:first-child {
+.function_step:first-child {
   margin-top: 0;
 }
-.function__step:last-child {
+.function_step:last-child {
   margin-bottom: 0;
 }
-.function__step::before {
+.function_step::before {
   counter-increment: compteListe 1;
   content: counter(compteListe) " ";
   background: #9356DC;
@@ -239,7 +262,7 @@ body, html {
   position: absolute;
   left: -0.75rem;
 }
-.function__icon {
+.function_icon {
   margin-right: 1rem;
   color: #7e7e7e;
 }
@@ -248,7 +271,7 @@ body, html {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
 }
-.restaurants__title {
+.restaurants_title {
   margin-top: 0;
 }
 
@@ -279,7 +302,7 @@ body, html {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   transition: 0.2s;
 }
-.card__img {
+.card_img {
   height: 12rem;
   width: 100%;
   border: transparent solid 0px;
@@ -287,7 +310,7 @@ body, html {
   box-shadow: none;
   object-fit: cover;
 }
-.card__badge {
+.card_badge {
   background-color: #99E2D0;
   color: #1b6150;
   padding: 0.5rem;
@@ -296,23 +319,23 @@ body, html {
   top: 1rem;
   right: 0.75rem;
 }
-.card__footer {
+.card_footer {
   padding: 1rem;
   position: relative;
   display: flex;
   align-items: center;
 }
-.card__content {
+.card_content {
   flex: 1;
 }
-.card__title {
+.card_title {
   margin: 0;
   margin-bottom: 0.25rem;
 }
-.card__subtitle {
+.card_subtitle {
   margin: 0;
 }
-.card__btn {
+.card_btn {
   height: 2rem;
   width: 2rem;
   background-color: transparent;
@@ -322,12 +345,12 @@ body, html {
   align-items: center;
   justify-content: center;
 }
-.card__like {
+.card_like {
   background-color: white !important;
 }
 .card:hover {
-  -ms-transform: scale(1.019); /* IE 9 */
-  -webkit-transform: scale(1.019); /* Safari 3-8 */
+  -ms-transform: scale(1.019);
+  -webkit-transform: scale(1.019);
   transform: scale(1.015);
 }
 .card:active {
@@ -337,7 +360,7 @@ body, html {
 .header--pourmenupage {
   position: relative;
 }
-.header__previous {
+.header_previous {
   position: absolute;
   left: 2rem;
   height: 2rem;
@@ -365,16 +388,21 @@ body, html {
   z-index: 1;
   position: relative;
 }
-.menu__header {
+.menu_header {
   padding: 1rem 2rem 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.menu__title {
+@media (max-width: 270px) {
+  .menu_header {
+    display: grid;
+  }
+}
+.menu_title {
   font-family: "Shrikhand", "cursive";
 }
-.menu__btn {
+.menu_btn {
   height: 2rem;
   width: 2rem;
   background-color: transparent;
@@ -387,10 +415,10 @@ body, html {
   position: relative;
   background-color: black;
 }
-.menu__btn:hover::before {
+.menu_btn:hover::before {
   opacity: 1;
 }
-.menu__btn::before {
+.menu_btn::before {
   opacity: 0;
   transition: 0.5s;
   content: "";
@@ -401,7 +429,7 @@ body, html {
   width: 100%;
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
-.menu__like {
+.menu_like {
   transition-duration: 0.25s;
   background-color: #f6f6f6;
   position: absolute;
@@ -414,7 +442,7 @@ body, html {
   justify-content: center;
   mix-blend-mode: lighten;
 }
-.menu__btn:hover .menu__like--noBg {
+.menu_btn:hover .menu_like--noBg {
   opacity: 0;
 }
 
@@ -433,13 +461,13 @@ body, html {
   overflow: hidden;
   padding: 0 1rem;
 }
-.submenu__title {
+.submenu_title {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
   font-weight: normal;
 }
-.submenu__title::after {
+.submenu_title::after {
   content: "";
   width: 3rem;
   height: 0.25rem;
@@ -458,38 +486,38 @@ body, html {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  animation: itemAppear 0.6s;
+  animation: itemAppear 0.8s;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
 }
-.menuItem__header {
+.menuItem_header {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   flex: 1;
 }
-.menuItem__title {
+.menuItem_title {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menuItem__description {
+.menuItem_description {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menuItem__price {
+.menuItem_price {
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding-left: 0.5rem;
 }
-.menuItem__confirmation {
+.menuItem_confirmation {
   background-color: #99E2D0;
   margin: -1rem -5rem -1rem 1rem;
   width: 4rem;
@@ -498,10 +526,10 @@ body, html {
   justify-content: center;
   transition-duration: 0.5s;
 }
-.menuItem:hover .menuItem__confirmation {
+.menuItem:hover .menuItem_confirmation {
   margin-right: -1rem;
 }
-.menuItem__wrapIcon {
+.menuItem_wrapIcon {
   height: 1.6rem;
   width: 1.6rem;
   background-color: white;
@@ -509,50 +537,50 @@ body, html {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(180deg);
+  transform: rotate(360deg);
   transition-duration: 0.5s;
 }
-.menuItem:hover .menuItem__wrapIcon {
+.menuItem:hover .menuItem_wrapIcon {
   transform: rotate(0);
 }
-.menuItem__icon {
+.menuItem_icon {
   color: #99E2D0;
 }
 
 .delay-0 {
-  animation-delay: cacl(scut-strip-unit(0)/10) s;
+  animation-delay: 0s;
 }
 
 .delay-1 {
-  animation-delay: cacl(scut-strip-unit(1)/10) s;
+  animation-delay: 0.1s;
 }
 
 .delay-2 {
-  animation-delay: cacl(scut-strip-unit(2)/10) s;
+  animation-delay: 0.2s;
 }
 
 .delay-3 {
-  animation-delay: cacl(scut-strip-unit(3)/10) s;
+  animation-delay: 0.3s;
 }
 
 .delay-4 {
-  animation-delay: cacl(scut-strip-unit(4)/10) s;
+  animation-delay: 0.4s;
 }
 
 .delay-5 {
-  animation-delay: cacl(scut-strip-unit(5)/10) s;
+  animation-delay: 0.5s;
 }
 
 .delay-6 {
-  animation-delay: cacl(scut-strip-unit(6)/10) s;
+  animation-delay: 0.6s;
 }
 
 .delay-7 {
-  animation-delay: cacl(scut-strip-unit(7)/10) s;
+  animation-delay: 0.7s;
 }
 
 .delay-8 {
-  animation-delay: cacl(scut-strip-unit(8)/10) s;
+  animation-delay: 0.8s;
 }
 
 .wrapBtn {
@@ -583,6 +611,11 @@ body, html {
 .commandBtn a {
   text-decoration: none;
   color: inherit;
+}
+@media (max-width: 280px) {
+  .commandBtn {
+    font-size: 0.6rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
